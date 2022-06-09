@@ -2,11 +2,11 @@ import path from "path";
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 export default {
-  mode: "development",
-  devtool: "eval-source-map",
+  mode: "production",
+  devtool: "source-map",
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "src"), // in dev mode the bundle is created in memory, so no 'dist' folder is required
+    path: path.resolve(__dirname, "dist"),
     publicPath: "/",
     filename: "bundle.js",
   },
